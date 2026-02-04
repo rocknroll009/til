@@ -1,0 +1,21 @@
+---
+layout: default
+title: "Topics"
+---
+
+<h2>Topics</h2>
+
+{% assign sorted_tags = site.tags | sort %}
+{% for tag in sorted_tags %}
+  {% assign name = tag[0] %}
+  {% assign posts = tag[1] %}
+  <h3 id="tag-{{ name | slugify }}">{{ name }} <span class="muted">({{ posts | size }})</span></h3>
+  <ul class="list">
+    {% for post in posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="muted">— {{ post.date | date: "%Y-%m-%d" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
