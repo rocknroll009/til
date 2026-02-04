@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Multiple git account 깃 복수계정"
-date: 2025-02-04
+date: 2026-02-04
 tags: [git]
 ---
 
