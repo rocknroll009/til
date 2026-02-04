@@ -12,7 +12,7 @@ layout: default
     {% if page.tags and page.tags.size > 0 %}
       <span> · </span>
       {% for tag in page.tags %}
-        <a class="pill" href="{{ "/topics.html#tag-" | append: tag | slugify | relative_url }}">{{ tag }}</a>
+        <a class="pill" href="{{ "/topics/" | relative_url }}#tag-{{ tag | slugify }}">{{ tag }}</a>
       {% endfor %}
     {% endif %}
   </div>
