@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article>
+  <h2 style="margin-bottom:6px;">{{ page.title }}</h2>
+
+  <div class="muted" style="margin-bottom:14px;">
+    {% if page.date %}
+      {{ page.date | date: "%Y-%m-%d" }}
+    {% endif %}
+
+    {% if page.tags and page.tags.size > 0 %}
+      <span> · </span>
+      {% for tag in page.tags %}
+        <a class="pill" href="{{ "/topics.html#tag-" | append: tag | slugify | relative_url }}">{{ tag }}</a>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  {{ content }}
+</article>
