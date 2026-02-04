@@ -1,0 +1,18 @@
+title: "My TIL"
+description: "Things I've learned."
+url: "https://rocknroll009.github.io"
+baseurl: ""  # 프로젝트 페이지면 "/repo-name" 로 설정할 수도 있음
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+timezone: Asia/Seoul
+
+# GitHub Pages 기본 지원 플러그인(선택)
+plugins:
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
