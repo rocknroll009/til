@@ -1,10 +1,16 @@
-title: "My TIL"
+title: "Inf. 00's TIL"
 description: "Things I've learned."
 url: "https://rocknroll009.github.io"
 baseurl: "/til"
 markdown: kramdown
+highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title/
 timezone: Asia/Seoul
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: text
 
 # GitHub Pages 기본 지원 플러그인(선택)
 plugins:
